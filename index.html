@@ -10,11 +10,11 @@
     <div class="container" id="app">
         
         <div class="slider">
-            <button class="prev">prec</button>
-            <div class="sliderimg">
-                <img src="./img/01.webp" alt="">
+            <button class="prev" @click="prevImg">prec</button>
+            <div class="sliderimg" v-for="(image, index) in images" v-show="currentIndex === index">
+                <img :src="image" alt="">
             </div>
-            <button class="next">next</button>
+            <button class="next" @click="nextImg" >next</button>
         </div>
         <div class="thumbs">
             <div class="thumb">
