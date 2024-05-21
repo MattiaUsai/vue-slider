@@ -36,10 +36,22 @@ createApp({
         },
         imgClick(i){
             this.currentIndex = i;
-            console.log(`ho cliccato su immagine n°${i} `)
+            
 
-        }
+        },
+        
+          
+        
+        
 
+    },
+    mounted(){
+        
+        setInterval(this.nextImg, 3000);
+        
+        
+          
+          
     }
     
 }).mount('#app');
