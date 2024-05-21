@@ -33,6 +33,11 @@ createApp({
                 this.currentIndex = this.images.length-1;
             }
             
+        },
+        imgClick(i){
+            this.currentIndex = i;
+            console.log(`ho cliccato su immagine n°${i} `)
+
         }
 
     }

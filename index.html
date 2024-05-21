@@ -17,21 +17,10 @@
             <button class="next" @click="nextImg" >next</button>
         </div>
         <div class="thumbs">
-            <div class="thumb">
-                <img src="./img/01.webp" alt="">
+            <div class="thumb" @click="imgClick(index)" v-for="(image, index) in images">
+                <img :src="image"  alt="">
             </div>
-            <div class="thumb">
-                <img src="./img/02.webp" alt="">
-            </div>
-            <div class="thumb">
-                <img src="./img/03.webp" alt="">
-            </div>
-            <div class="thumb">
-                <img src="./img/04.webp" alt="">
-            </div>
-            <div class="thumb">
-                <img src="./img/05.webp" alt="">
-            </div>
+            
         </div>
     </div>
 
