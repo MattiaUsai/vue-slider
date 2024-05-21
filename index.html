@@ -11,7 +11,7 @@
         
         <div class="slider">
             <button class="prev" @click="prevImg">prec</button>
-            <div class="sliderimg" v-for="(image, index) in images" v-show="currentIndex === index">
+            <div class="sliderimg" @mouseover="hover = true" @mouseleave="hover = false" v-for="(image, index) in images" v-show="currentIndex === index">
                 <img :src="image" alt="">
             </div>
             <button class="next" @click="nextImg" >next</button>

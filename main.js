@@ -13,17 +13,21 @@ createApp({
                 "./img/04.webp",
                 "./img/05.webp",
             ],
-            currentIndex:2
+            currentIndex:2,
+            hover: false,
             
             
         }
     },
     methods:{
         nextImg(){
-            if(this.currentIndex < this.images.length-1) {
-                this.currentIndex++;
-            }else{
-                this.currentIndex = 0;
+            if(this.hover === false){
+
+                if(this.currentIndex < this.images.length-1) {
+                    this.currentIndex++;
+                }else{
+                    this.currentIndex = 0;
+                }
             }
         },
         prevImg(){
@@ -46,6 +50,7 @@ createApp({
 
     },
     mounted(){
+        
         
         setInterval(this.nextImg, 3000);
         
