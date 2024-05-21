@@ -8,16 +8,24 @@
 </head>
 <body>
     <div class="container" id="app">
-        
+        <!-- SLIDER -->
         <div class="slider">
+            <!-- BOTTONE IMMAGINE PRECEDENTE -->
             <button class="prev" @click="prevImg">prec</button>
+            <!-- CONTENITORE IMMAGINI SLIDER -->
             <div class="sliderimg" @mouseover="hover = true" @mouseleave="hover = false" v-for="(image, index) in images" v-show="currentIndex === index">
+                <!-- IMMAGINE SLIDER -->
                 <img :src="image" alt="">
             </div>
+            <!-- BOTTONE IMMAGINE SUCESSIVA -->
             <button class="next" @click="nextImg" >next</button>
         </div>
+        
+        <!-- CONTENITORE THUMB -->
         <div class="thumbs">
+            <!-- THUMB -->
             <div class="thumb" @click="imgClick(index)" v-for="(image, index) in images">
+                <!-- IMG THUMB -->
                 <img :src="image"  alt="">
             </div>
             
