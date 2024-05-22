@@ -11,7 +11,7 @@
         <!-- SLIDER -->
         <div class="slider">
             <!-- BOTTONE IMMAGINE PRECEDENTE -->
-            <button class="prev" @click="prevImg">prec</button>
+                        <button class="prev" @click="prevImg">prec</button>
             <!-- CONTENITORE IMMAGINI SLIDER -->
             <div class="sliderimg" @mouseover="hover = true" @mouseleave="hover = false" v-for="(image, index) in images" v-show="currentIndex === index">
                 <!-- IMMAGINE SLIDER -->
@@ -24,7 +24,7 @@
         <!-- CONTENITORE THUMB -->
         <div class="thumbs">
             <!-- THUMB -->
-            <div class="thumb" @click="imgClick(index)" v-for="(image, index) in images">
+            <div class="thumb " :class="{ active: currentIndex===index }" @click="imgClick(index)" v-for="(image, index) in images">
                 <!-- IMG THUMB -->
                 <img :src="image"  alt="">
             </div>
@@ -33,12 +33,6 @@
     </div>
 
 
-
-
-
-
-
-    
     <!-- LINK VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- LINK JS -->

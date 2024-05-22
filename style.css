@@ -58,11 +58,17 @@ body{
     width: 100%;
     margin-left: 10px;
     margin: 5px ;
+    border-radius: 10px;
+    background-color: black;
+    
 }
 .thumb img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-
+    opacity: 0.5;
+}
+.thumb.active img{
+    opacity: 1;
 }

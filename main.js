@@ -18,7 +18,7 @@ createApp({
             currentIndex:0,
             // VARIABILE MOUSE HOVER
             hover: false,
-            
+            isActive: true
             
         }
     },
